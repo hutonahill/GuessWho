@@ -20,6 +20,8 @@ public static class Program {
         Dictionary<string, Action<string[]>> CommandRegistry = new Dictionary<string, Action<string[]>>();
 
         CommandRegistry["stop"] = Stop;
+        CommandRegistry["guess"] = MakeGuess;
+        CommandRegistry["resolve"] = ResolveGuess;
         
         while (running) {
             string? userInput = Input("> ");
